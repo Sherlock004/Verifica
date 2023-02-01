@@ -44,6 +44,7 @@ function CalcoloPhi(p, q) {
 
 let c = 1;
 function Cripta() {
+  if(c != 1) c = 1;
   for (let i = 0; i < e; i++) {
     c = (c * messaggio) % prodotto;
   }
@@ -58,7 +59,29 @@ function Decripta() {
   document.getElementById("msgDecriptato").innerHTML = `Messaggio decriptato: ${m2}`;
 }
 
-function download() {
-  
-}
+let chiaviPubblicaS;
+let chiaviPrivataS;
 
+function getChiavi() {
+  let temp1 = document.getElementById("chiavePubblica").value;
+  chiaviPubblicaS = temp1.split(",").map(i => parseInt(i));
+
+  let temp2 = document.getElementById("chiavePrivata").value;
+  chiaviPrivataS = temp2.split(",").map(i => parseInt(i));
+
+  let m = document.getElementById("messaggio").value;
+  let c = 1;
+  for (let i = 0; i < chiaviPubblicaS[0]; i++) {
+    c = (c * m) % chiaviPubblicaS[1];
+  }
+
+  document.getElementById("criptato").innerHTML = `Messaggio criptato: ${c}`;
+
+  let m2 = 1;
+  for (let i = 0; i < chiaviPrivataS[0]; i++) {
+    m2 = (m2 * c) % chiaviPrivataS[1];
+  }
+
+  
+  document.getElementById("decriptato").innerHTML = `Messaggio decriptato: ${m2}`;
+}

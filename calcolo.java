@@ -49,6 +49,5 @@ public class calcolo {
     }
 
     System.out.println("Il messaggio decriptato è: " + m2);
-
   }
 }

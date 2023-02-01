@@ -9,27 +9,44 @@
 </head>
 <body>
   <div id="Container">
-    <div id="Input">
-      <p>Inserisci p</p>
-      <input type="text" placeholder="inserisci p" id="p">
-      <p>Inserisci q</p>
-      <input type="text" placeholder="inserisci q" id="q">
-      <p>Inserisci il numero coprimo e</p>
-      <input type="text" placeholder="inserisci e" id="e">
-
-      <p>Inserisci messaggio da criptare</p>
-      <input type="text" id="msg" placeholder="messaggio">
-
+    <div id="Container1">
+      <h3>Crea chiave pubblica e privata</h3>
+      <div id="Input">
+        <p>Inserisci p</p>
+        <input type="text" placeholder="inserisci p" id="p">
+        <p>Inserisci q</p>
+        <input type="text" placeholder="inserisci q" id="q">
+        <p>Inserisci il numero coprimo e</p>
+        <input type="text" placeholder="inserisci e" id="e">
+  
+        <p>Inserisci messaggio da criptare</p>
+        <input type="text" id="msg" placeholder="messaggio">
+  
+      </div>
+      <button id="btn" onclick="Chiavi()">Genera Chiavi</button>
+      <button id="btn" onclick="Cripta()">Cripta Messaggio</button>
+      <button id="btn" onclick="Decripta()">Decripta Messaggio</button>
+      
+      <div id="Output">
+        <h5 id="ChiavePubblica"></h5>
+        <h5 id="ChiavePrivata"></h5>
+        <h5 id="msgCriptato"></h5>
+        <h5 id="msgDecriptato"></h5>
+      </div>
     </div>
-    <button id="btn" onclick="Chiavi()">Genera Chiavi</button>
-    <button id="btn" onclick="Cripta()">Cripta Messaggio</button>
-    <button id="btn" onclick="Decripta()">Decripta Messaggio</button>
-    
-    <div id="Output">
-      <h5 id="ChiavePubblica"></h5>
-      <h5 id="ChiavePrivata"></h5>
-      <h5 id="msgCriptato"></h5>
-      <h5 id="msgDecriptato"></h5>
+    <div id="Container2">
+      <h3>Cripta messaggio con chiavi pubblica e privata</h3>
+      <p>Inserisci chiave pubblica</p>
+      <input type="text" placeholder="n,n1" id="chiavePubblica">
+      <p>Inserisci chiave privata</p>
+      <input type="text" placeholder="n,n1" id="chiavePrivata">
+      <p>Inserisci il messaggio da criptare</p>
+      <input type="text" placeholder="Messaggio" id="messaggio">
+
+      <h5 id="criptato"></h5>
+      <h5 id="decriptato"></h5>
+
+      <button onclick="getChiavi()">Cripta e decripta</button>
     </div>
   </div>
   <a href="calcolo.java" download="Program">Download programma offline</a></body>

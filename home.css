@@ -1,2 +1,16 @@
+#Container {
+  display:  flex;
+  align-items: center;
+}
 
+#Container2 {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  #Container {
+    flex-direction: column;
+  }
+}
+  
 
